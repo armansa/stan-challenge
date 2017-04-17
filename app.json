@@ -1,14 +1,14 @@
 {
-  "name": "Start on Heroku: Go",
-  "description": "Go Getting Started Example App",
+  "name": "Stan Go Test",
+  "description": "Stan Go Test",
   "keywords": [
-    "getting-started",
+    "stan",
     "go",
     "sample",
     "example"
   ],
   "image": "heroku/go:1.6",
-  "mount_dir": "src/github.com/heroku/go-getting-started",
-  "website": "http://github.com/heroku/go-getting-started",
-  "repository": "http://github.com/heroku/go-getting-started"
+  "mount_dir": "src/github.com/heroku/stan-go-test",
+  "website": "http://github.com/heroku/stan-go-test",
+  "repository": "http://github.com/heroku/stan-go-test"
 }
