@@ -65,13 +65,13 @@ func (message *Message) filter() (response []Record) {
 func action(c *gin.Context) {
 	defer func() {
 		if r := recover(); r != nil {
-		  c.IndentedJSON(http.StatusBadRequest, gin.H{"error": r})
+		  c.IndentedJSON(http.StatusBadRequest, gin.H{"error": "Could not decode request: " + r.(string)})
 		}
 	}()
 	var msg Message
 	c.BindJSON(&msg)
 	if msg.Payload == nil {
-		panic("action payload has invalid format")
+		panic("JSON parsing failed")
 	}
 	response := msg.filter()
 	c.IndentedJSON(http.StatusOK, gin.H{"response": response})
