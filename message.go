@@ -45,3 +45,13 @@ type Record struct {
 	Slug string `json:"slug" binding:"required"`
 	Title string `json:"title" binding:"required"`
 }
+
+func (message *Message) Filter() (response []Record) {
+	response = make([]Record, 0, len(message.Payload))
+	for _, show := range message.Payload {
+    if show.Drm && show.EpisodeCount > 0 {
+			response = append(response, Record{show.Img.ShowImage, show.Slug, show.Title})
+		}
+	}
+	return
+}
