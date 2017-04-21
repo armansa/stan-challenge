@@ -10,8 +10,8 @@ This application is written for [Stan Coding Challenge](https://challengeaccepte
 Make sure you have [Go](http://golang.org/doc/install) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
 
 ```sh
-$ go get -u github.com/heroku/stan-go-test
-$ cd $GOPATH/src/github.com/heroku/stan-go-test
+$ go get -u github.com/armansa/stan-go-test
+$ cd $GOPATH/src/github.com/armansa/stan-go-test
 $ heroku local
 ```
 
